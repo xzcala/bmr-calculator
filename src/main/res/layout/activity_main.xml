@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/bmr_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginLeft="76dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginRight="76dp"
+        android:layout_marginBottom="297dp"
+        android:gravity="center"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/age_editText"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginBottom="91dp"
+        android:ems="10"
+        android:hint="Age in years"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/clear_button"
+        app:layout_constraintEnd_toEndOf="@+id/weight_editText"
+        app:layout_constraintStart_toStartOf="@+id/weight_editText"
+        app:layout_constraintTop_toTopOf="@+id/feet_editText" />
+
+    <Button
+        android:id="@+id/clear_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="9dp"
+        android:text="Clear"
+        app:layout_constraintBottom_toTopOf="@+id/calculate_button"
+        app:layout_constraintEnd_toEndOf="@+id/calculate_button"
+        app:layout_constraintStart_toStartOf="@+id/calculate_button"
+        app:layout_constraintTop_toTopOf="@+id/gender_radioGroup" />
+
+    <EditText
+        android:id="@+id/inch_editText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginRight="72dp"
+        android:ems="10"
+        android:hint="in"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/weight_editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/feet_editText"
+        app:layout_constraintTop_toTopOf="@+id/feet_editText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/feet_editText"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="235dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="237dp"
+        android:ems="10"
+        android:hint="Height in feet"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/gender_radioGroup"
+        app:layout_constraintEnd_toStartOf="@+id/inch_editText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/weight_editText"
+        android:layout_width="258dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:hint="Weight in lbs"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/age_editText"
+        app:layout_constraintEnd_toStartOf="@+id/inch_editText"
+        app:layout_constraintStart_toStartOf="@+id/inch_editText"
+        app:layout_constraintTop_toBottomOf="@+id/feet_editText" />
+
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="59dp"
+        android:background="#C8F44336"
+        android:text="Calculate"
+        app:layout_constraintStart_toEndOf="@+id/gender_radioGroup"
+        app:layout_constraintTop_toTopOf="@+id/gender_radioGroup" />
+
+    <TextView
+        android:id="@+id/title_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="39dp"
+        android:text="@string/app_name"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/inch_editText"
+        app:layout_constraintStart_toStartOf="@+id/feet_editText" />
+
+    <CheckBox
+        android:id="@+id/activity_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginRight="21dp"
+        android:text="Activity"
+        app:layout_constraintEnd_toEndOf="@+id/gender_radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/gender_radioGroup" />
+
+    <RadioGroup
+        android:id="@+id/gender_radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="@+id/bmr_textView"
+        app:layout_constraintTop_toBottomOf="@+id/bmr_textView">
+
+        <RadioButton
+            android:id="@+id/male_radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Gender"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/female_radioButton"
+            android:layout_width="124dp"
+            android:layout_height="wrap_content"
+            android:hint="Gender"
+            android:text="Female" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
